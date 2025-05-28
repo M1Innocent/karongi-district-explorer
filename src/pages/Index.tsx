@@ -1,18 +1,27 @@
 
 import Layout from '../components/Layout';
 import SectionCard from '../components/SectionCard';
+import WelcomeBanner from '../components/WelcomeBanner';
+import ActivityShowcase from '../components/ActivityShowcase';
+import SocialMediaSection from '../components/SocialMediaSection';
 import { Users, MapPin, Sprout, TrendingUp } from 'lucide-react';
 
 const Index = () => {
   return (
     <Layout>
-      <div className="space-y-8">
+      <div className="space-y-12">
+        {/* Welcome Banner */}
+        <WelcomeBanner />
+
+        {/* Activity Showcase */}
+        <ActivityShowcase />
+
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Social Structure of <span className="text-rwanda-blue">Karongi District</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Discover the vibrant social fabric that makes Karongi District a unique and thriving community in Rwanda's Western Province.
           </p>
         </div>
@@ -137,6 +146,9 @@ const Index = () => {
             </div>
           </SectionCard>
         </div>
+
+        {/* Social Media Section */}
+        <SocialMediaSection />
       </div>
     </Layout>
   );
